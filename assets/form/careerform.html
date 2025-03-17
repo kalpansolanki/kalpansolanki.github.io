@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Career Form | CodingLab</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="header" data-header>
+      <div class="header-bottom">
+        <div class="container">
+  
+          <a href="#" class="logo">
+            <img src="./assets/images/Screenshot 2024-05-16 200630.png  "width="230" height="60" alt="PegasusAutomation logo">
+          </a>
+  
+          <nav class="navbar" data-navbar>
+  
+            <div class="navbar-top">
+  
+              <a href="#" class="logo">
+                <img src="./assets/images/logo.png" alt="pegasus_homes_logo">
+              </a>
+  
+              <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+  
+            </div>
+  
+            <div class="navbar-bottom">
+              <ul class="navbar-list">
+  
+                <li>
+                  <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                </li>
+  
+                <li>
+                  <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+                </li>
+  
+                <li>
+                  <a href="#service" class="navbar-link" data-nav-link>Service</a>
+                </li>
+  
+                <li>
+                  <a href="#features" class="navbar-link" data-nav-link>Technologies</a>
+                </li>
+  
+                
+                <li>
+                  <a href="#contact" class="navbar-link" data-nav-link>Career</a>
+                </li>
+                <li>
+                  <a href="./assets/form/support.html" class="navbar-link" data-nav-link>Contact Us</a>
+                </li>
+  
+              </ul>
+            </div>
+  
+          </nav>
+  
+          
+  
+        </div>
+      </div>
+  
+    </header>
+    <div class="container">
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">A-44/655, Krishnanagar, Saijpur Bogha</div>
+            <div class="text-two">Ahmedabad </div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+91 75748 42044</div>
+            <div class="text-two">+91 99250 69749</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">abhiratnman1@gmail.com </div>
+            <div class="text-two">pegasusautomation05@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Join Us</div>
+          <p>Please fill out the support form below for any inquiries or assistance needed. Our dedicated team is committed to providing timely and personalized support to address your needs effectively. Thank you for reaching out</p>
+          <form action="https://formsubmit.co/pdpatel2564@gmail.com" method="POST" enctype="multipart/form-data">
+            <div class="input-box">
+              <input type="text" name="name" required placeholder="Enter your Full Name" />
+            </div>
+            <div class="input-box">
+              <input type="email" name="email" required placeholder="Enter your Email" />
+            </div>
+            <div class="input-box">
+              <input type="text" name="phone" required placeholder="Enter your Phone Number" />
+            </div>
+            <div class="input-box">
+                <input type="text" name="city" required placeholder="City, Country" />
+            </div>
+            <div>
+            <label for="career">Career Option:</label>
+            <select id="career" name="career" required>
+                <option value="">-- Select an Option --</option>
+                <option value="Embedded Firmware Developer">Embedded Firmware Developer</option>
+                <option value="Embedded Hardware Developer">Embedded Hardware Developer</option>
+                <option value="Business Development Manager">Business Development Manager</option>
+                <option value="Graphic Designer">Graphic Designer</option>
+                <option value="Other">Other</option>
+            </select>
+            </div>
+            <div class="button">
+                <button type="submit">SUBMIT</button>
+            </div>
+            <div>
+                <input type="hidden" name="_template" value="table">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

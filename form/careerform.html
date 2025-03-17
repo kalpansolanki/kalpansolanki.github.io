@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Career Form | CodingLab</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-two">Ahmedabad, Gujarat </div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+91 75748 42044</div>
+            <div class="text-two">+91 70965 15266</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">abhi@pegasusautomation.in</div>
+            <div class="text-two">prashant@pegasusautomation.in</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Join Us</div>
+          <p>Please fill out the support form below for any inquiries or assistance needed. Our dedicated team is committed to providing timely and personalized support to address your needs effectively. Thank you for reaching out</p>
+          <form action="https://formsubmit.co/abhi@pegasusautomation.in" method="POST" enctype="multipart/form-data">
+            <div class="input-box">
+              <input type="text" name="name" required placeholder="Enter your Full Name" />
+            </div>
+            <div class="input-box">
+              <input type="email" name="email" required placeholder="Enter your Email" />
+            </div>
+            <div class="input-box">
+              <input type="text" name="phone" required placeholder="Enter your Phone Number" />
+            </div>
+            <div class="input-box">
+                <input type="text" name="city" required placeholder="City, Country" />
+            </div>
+            <div>
+            <label for="career">Career Option:</label>
+            <select id="career" name="career" required>
+                <option value="">-- Select an Option --</option>
+                <option value="Embedded Firmware Developer">Embedded Firmware Developer</option>
+                <option value="Embedded Hardware Developer">Embedded Hardware Developer</option>
+                <option value="Business Development Manager">Business Development Manager</option>
+                <option value="Graphic Designer">Graphic Designer</option>
+                <option value="Other">Other</option>
+            </select>
+            </div>
+            <div class="button">
+                <button type="submit">SUBMIT</button>
+            </div>
+            <div>
+                <input type="hidden" name="_template" value="table">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
