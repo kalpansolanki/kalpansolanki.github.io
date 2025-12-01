@@ -1,363 +1,537 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Future of AI Agents: An Infographic</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-            }
-        }
-    </style>
-</head>
-<body class="bg-[#1A1A2E] text-white">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pegasus Automation</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 
-    <!--
-    Narrative Plan:
-    1.  The AI Landscape: A high-level overview of the current AI ecosystem, covering governance, agent capabilities, and models.
-    2.  Introducing Google ADK: Focus on what the Agent Development Kit is and the power of LLM-powered agents.
-    3.  The Future is Autonomous: Visualize the future trends and evolution of AI agents.
-    4.  Unleashing Automation: Show practical, real-world applications across various industries.
-    5.  The Automation Toolkit: A flowchart illustrating the tools and platforms that integrate with AI agents.
-    6.  Project Blueprint: A simple guide on how to get started with the associated project.
-
-    Color Palette Selection: Energetic & Playful (#00F0B5, #00E0F0, #6200F0, #F000B5, #F0E000) will be adapted for a dark theme. Base background: #1A1A2E (a dark navy/purple). Accent colors will be used for charts and highlights.
-
-    Visualization Plan:
-    -   Section 1 (AI Landscape): Goal: Organize. Visualization: Styled HTML/CSS cards with Unicode icons. Justification: Best for qualitative concepts. NO SVG.
-    -   Section 2 (Introducing ADK): Goal: Inform. Visualization: Donut Chart for key benefits. Justification: Shows composition effectively. Library: Chart.js/Canvas. NO SVG.
-    -   Section 3 (Future of AI Agents): Goal: Show Change (conceptual). Visualization: Horizontal timeline with HTML/CSS. Justification: Ideal for process/evolution. NO SVG.
-    -   Section 4 (Automation Possibilities): Goal: Compare. Visualization: Horizontal Bar Chart showing illustrative impact. Justification: Compares categories clearly. Library: Chart.js/Canvas. NO SVG.
-    -   Section 5 (Automation Toolkit): Goal: Organize/Relate. Visualization: Flowchart with HTML/CSS. Justification: Shows system relationships. NO SVG, NO MERMAID JS.
-    -   Section 6 (Project Blueprint): Goal: Organize. Visualization: Styled numbered list. Justification: Simple and clear for steps. NO SVG.
-
-    Final Confirmation: No SVG or Mermaid JS is used in this file. All visuals are created with Chart.js on Canvas or structured HTML/CSS with Tailwind.
-    -->
-
-    <div class="container mx-auto px-4 py-8 md:py-16">
-
-        <header class="text-center mb-16">
-            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#00F0B5] to-[#00E0F0]">The Future of AI Agents</h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">An exploration of the Google Agent Development Kit and the new era of intelligent automation it enables.</p>
-        </header>
-
-        <main class="space-y-20">
-
-            <section id="landscape">
-                <h2 class="text-3xl font-bold text-center mb-2">The AI Landscape</h2>
-                <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto">Before building the future, we must understand the present. The current AI ecosystem is a complex interplay of governance, powerful agent capabilities, and a diverse range of models.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-[#16213E] rounded-xl p-6 shadow-lg border border-gray-700 hover:border-[#00F0B5] transition-all duration-300">
-                        <h3 class="text-2xl font-bold mb-3 flex items-center"><span class="text-3xl mr-3">🛡️</span>AI Governance</h3>
-                        <ul class="space-y-2 text-gray-300">
-                            <li>Ensuring ethical development and deployment.</li>
-                            <li>Establishing clear accountability frameworks.</li>
-                            <li>Promoting transparency in AI decision-making.</li>
-                        </ul>
-                    </div>
-                    <div class="bg-[#16213E] rounded-xl p-6 shadow-lg border border-gray-700 hover:border-[#00E0F0] transition-all duration-300">
-                        <h3 class="text-2xl font-bold mb-3 flex items-center"><span class="text-3xl mr-3">🤖</span>Agent Capabilities</h3>
-                        <ul class="space-y-2 text-gray-300">
-                            <li>Automating workflows with tools like Make.com.</li>
-                            <li>Integrating into platforms like WhatsApp.</li>
-                            <li>Leveraging conversational power of models like ChatGPT.</li>
-                        </ul>
-                    </div>
-                    <div class="bg-[#16213E] rounded-xl p-6 shadow-lg border border-gray-700 hover:border-[#F000B5] transition-all duration-300">
-                        <h3 class="text-2xl font-bold mb-3 flex items-center"><span class="text-3xl mr-3">🧠</span>Model Ecosystem</h3>
-                        <ul class="space-y-2 text-gray-300">
-                            <li>Creative generation with Midjourney & Sora.</li>
-                            <li>Access to open-source models via Hugging Face.</li>
-                            <li>Experimentation in Google AI Studio & OpenAI Playground.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="adk-intro">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h2 class="text-3xl font-bold mb-4">Google's Agent Development Kit (ADK)</h2>
-                        <p class="text-gray-300 mb-6">The ADK is a powerful framework from Google designed to simplify the creation of intelligent, LLM-powered agents. It provides the essential building blocks for developers to construct agents that can understand complex instructions, reason about problems, and interact with external tools to accomplish tasks.</p>
-                        <div class="bg-[#16213E] p-4 rounded-lg">
-                            <p class="text-lg font-semibold text-[#00E0F0]">An LLM-Powered Agent can:</p>
-                            <ul class="list-disc list-inside mt-2 text-gray-300">
-                                <li>Understand and generate natural language.</li>
-                                <li>Make context-aware decisions.</li>
-                                <li>Interact with external APIs and tools.</li>
-                                <li>Maintain memory and learn from interactions.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center">
-                         <h3 class="text-xl font-semibold text-center mb-4">Key Benefits of ADK</h3>
-                        <div class="chart-container max-w-sm mx-auto">
-                            <canvas id="adkBenefitsChart"></canvas>
-                        </div>
-                        <p class="text-center text-sm text-gray-500 mt-2">A donut chart showing the core advantages of using the ADK framework for agent development.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="future-agents">
-                <h2 class="text-3xl font-bold text-center mb-2">The Future is Autonomous</h2>
-                <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto">AI agents are evolving from simple tools to proactive partners. Here's a look at the trajectory of their development and impact on our lives.</p>
-                <div class="relative w-full">
-                    <div class="hidden md:block border-t-4 border-dashed border-[#6200F0] absolute top-1/2 w-full"></div>
-                    <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 relative">
-                        <div class="text-center w-full md:w-1/5">
-                            <div class="bg-[#00F0B5] text-[#1A1A2E] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2 text-2xl font-bold">1</div>
-                            <h4 class="font-bold">Hyper-Personalization</h4>
-                            <p class="text-sm text-gray-400">Tailored experiences in education, health, and commerce.</p>
-                        </div>
-                        <div class="text-center w-full md:w-1/5">
-                             <div class="bg-[#00E0F0] text-[#1A1A2E] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2 text-2xl font-bold">2</div>
-                            <h4 class="font-bold">Proactive Assistance</h4>
-                            <p class="text-sm text-gray-400">Anticipating needs and offering solutions preemptively.</p>
-                        </div>
-                        <div class="text-center w-full md:w-1/5">
-                             <div class="bg-[#F000B5] text-[#1A1A2E] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2 text-2xl font-bold">3</div>
-                            <h4 class="font-bold">Complex Problem-Solving</h4>
-                            <p class="text-sm text-gray-400">Multi-agent systems tackling scientific and logistical challenges.</p>
-                        </div>
-                        <div class="text-center w-full md:w-1/5">
-                             <div class="bg-[#F0E000] text-[#1A1A2E] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2 text-2xl font-bold">4</div>
-                            <h4 class="font-bold">Seamless Integration</h4>
-                             <p class="text-sm text-gray-400">Agents becoming an invisible, helpful layer in all digital interfaces.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="automation-possibilities">
-                <h2 class="text-3xl font-bold text-center mb-2">Unleashing Automation Across Domains</h2>
-                <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto">The practical applications of AI agents are vast and transformative. This chart illustrates the potential impact across key sectors, demonstrating the broad utility of this technology.</p>
-                <div class="bg-[#16213E] p-4 md:p-8 rounded-xl shadow-lg">
-                    <div class="chart-container mx-auto" style="height: 400px; max-height: 500px;">
-                        <canvas id="automationImpactChart"></canvas>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="toolkit">
-                <h2 class="text-3xl font-bold text-center mb-2">The Modern Automation Toolkit</h2>
-                 <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto">Building a powerful agent requires more than just a core framework. It involves integrating with a rich ecosystem of platforms and services to extend its capabilities.</p>
-                <div class="bg-[#16213E] p-6 rounded-xl shadow-lg border border-gray-700">
-                    <div class="text-center mb-6">
-                        <div class="inline-block bg-gradient-to-r from-[#00F0B5] to-[#00E0F0] text-[#1A1A2E] p-4 rounded-lg font-bold text-xl">
-                            AI Agent Core (Built with ADK)
-                        </div>
-                    </div>
-                    <div class="flex justify-center mb-6">
-                        <div class="w-1 bg-[#6200F0] h-8"></div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                        <div class="flex flex-col items-center">
-                            <div class="w-full h-1 bg-[#6200F0] mb-6 hidden md:block"></div>
-                            <h4 class="text-lg font-semibold text-[#00E0F0] mb-3">Integration Platforms (iPaaS)</h4>
-                            <div class="space-y-2 text-gray-300">
-                                <p>Make.com</p>
-                                <p>Zapier</p>
-                                <p>Microsoft Power Automate</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-full h-1 bg-[#6200F0] mb-6 hidden md:block"></div>
-                            <h4 class="text-lg font-semibold text-[#00F0B5] mb-3">Robotic Process Automation (RPA)</h4>
-                            <div class="space-y-2 text-gray-300">
-                                <p>UiPath</p>
-                                <p>Automation Anywhere</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-full h-1 bg-[#6200F0] mb-6 hidden md:block"></div>
-                            <h4 class="text-lg font-semibold text-[#F000B5] mb-3">Cloud AI Services</h4>
-                            <div class="space-y-2 text-gray-300">
-                                <p>Google Cloud AI</p>
-                                <p>Azure AI</p>
-                                <p>AWS AI/ML</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                           <div class="w-full h-1 bg-[#6200F0] mb-6 hidden md:block"></div>
-                            <h4 class="text-lg font-semibold text-[#F0E000] mb-3">Specialized LLM APIs</h4>
-                            <div class="space-y-2 text-gray-300">
-                                <p>Google Gemini</p>
-                                <p>OpenAI (GPT series)</p>
-                                <p>Anthropic Claude</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-          
-        </main>
-
-     
-
-    </div>
-
+    <!-- Tailwind Config -->
     <script>
-        const tooltipTitleCallback = (tooltipItems) => {
-            const item = tooltipItems[0];
-            let label = item.chart.data.labels[item.dataIndex];
-            if (Array.isArray(label)) {
-                return label.join(' ');
-            }
-            return label;
-        };
-
-        const wrapLabel = (label, maxLength = 16) => {
-            if (label.length <= maxLength) {
-                return label;
-            }
-            const words = label.split(' ');
-            const lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + ' ' + word).trim().length > maxLength) {
-                    lines.push(currentLine.trim());
-                    currentLine = word;
-                } else {
-                    currentLine = (currentLine + ' ' + word).trim();
-                }
-            });
-            if (currentLine) {
-                lines.push(currentLine.trim());
-            }
-            return lines;
-        };
-        
-        const adkBenefitsCtx = document.getElementById('adkBenefitsChart').getContext('2d');
-        new Chart(adkBenefitsCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Streamlined Creation', 'Complex Behaviors', 'Easy Integration'],
-                datasets: [{
-                    label: 'ADK Benefits',
-                    data: [35, 45, 20],
-                    backgroundColor: [
-                        '#00F0B5',
-                        '#00E0F0',
-                        '#F000B5'
-                    ],
-                    borderColor: '#16213E',
-                    borderWidth: 4,
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            color: '#FFFFFF'
-                        }
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0045E0",
+                        secondary: "#FF006B",
+                        black: "#1F1F1F",
+                        grey: "#3A3A3A",
+                        "light-grey": "#707070",
+                        "very-light-grey": "#D9D9D9",
+                        white: "#FEFEFE",
+                        red: "#FF0000",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#18181B",
+                        "input-bg-light": "#F0F0F0",
+                        "input-bg-dark": "#2C2C2C",
                     },
-                    tooltip: {
-                        callbacks: {
-                            title: tooltipTitleCallback
-                        }
-                    }
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                        body: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "2.5xl": "1.25rem",
+                        "3.5xl": "1.75rem",
+                    },
                 },
-                cutout: '70%'
-            }
-        });
-
-        const automationImpactCtx = document.getElementById('automationImpactChart').getContext('2d');
-        const rawLabels = [
-            'Customer Service & Support',
-            'Business Process Automation (BPA)',
-            'Content Creation & Curation',
-            'Personal Productivity',
-            'Healthcare',
-            'Education',
-            'IoT & Smart Environments'
-        ];
-
-        new Chart(automationImpactCtx, {
-            type: 'bar',
-            data: {
-                labels: rawLabels.map(label => wrapLabel(label)),
-                datasets: [{
-                    label: 'Illustrative Automation Impact Score',
-                    data: [90, 85, 75, 80, 70, 65, 88],
-                    backgroundColor: [
-                        'rgba(0, 240, 181, 0.6)',
-                        'rgba(0, 224, 240, 0.6)',
-                        'rgba(240, 0, 181, 0.6)',
-                        'rgba(240, 224, 0, 0.6)',
-                        'rgba(98, 0, 240, 0.6)',
-                        'rgba(0, 240, 181, 0.8)',
-                        'rgba(0, 224, 240, 0.8)'
-                    ],
-                    borderColor: [
-                        '#00F0B5',
-                        '#00E0F0',
-                        '#F000B5',
-                        '#F0E000',
-                        '#6200F0',
-                        '#00F0B5',
-                        '#00E0F0'
-                    ],
-                    borderWidth: 1
-                }]
             },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        },
-                        ticks: {
-                            color: '#FFFFFF'
-                        }
-                    },
-                    y: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            color: '#FFFFFF'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        callbacks: {
-                           title: tooltipTitleCallback
-                        }
-                    }
-                }
-            }
-        });
+        };
     </script>
 
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --color-primary: #0045E0;
+                --color-secondary: #FF006B;
+            }
+        }
+        /* Utility to hide/show sections */
+        .view-section {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .view-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+
+    <script>
+        // Simple Navigation Script
+        function navigateTo(viewId) {
+            // Hide all views
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+            // Show requested view
+            const target = document.getElementById(viewId);
+            if(target) {
+                target.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Handle browser back button
+        window.onpopstate = function(event) {
+            navigateTo('home-view');
+        };
+    </script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-grey dark:text-very-light-grey">
+
+    <!-- ==============================================
+         VIEW 1: HOME PAGE
+         ============================================== -->
+    <div id="home-view" class="view-section active">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <header class="py-6 flex justify-between items-center relative z-50">
+                <a class="flex items-center gap-3" href="#" onclick="navigateTo('home-view'); return false;">
+                   
+                    <img src="header.png" alt="Pegasus Automation" class="h-20 w-56" />
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#" onclick="navigateTo('home-view'); return false;">Home</a>
+                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#about">About Us</a>
+                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#services">Service</a>
+                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#technologies">Technologies</a>
+                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('contact-view')">Contact Us</a>
+                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('join-view')">Join Us</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-light-grey focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-black/20 shadow-sm">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </header>
+
+            <!-- FIXED: Dropdown Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-4 right-4 bg-white dark:bg-[#252525] shadow-xl rounded-2xl z-40 p-6 flex flex-col space-y-4 border border-gray-100 dark:border-gray-700">
+                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#" onclick="navigateTo('home-view'); return false;">Home</a>
+                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#about" onclick="toggleMobileMenu()">About Us</a>
+                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#services" onclick="toggleMobileMenu()">Service</a>
+                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#technologies" onclick="toggleMobileMenu()">Technologies</a>
+                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('contact-view')">Contact Us</a>
+                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('join-view')">Join Us</a>
+            </div>
+
+            <main class="py-16 md:py-24">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 bg-blue-100 dark:bg-primary/20 text-primary font-semibold px-4 py-2 rounded-full mb-6">
+                            <span class="material-symbols-outlined text-base">auto_awesome</span>
+                            Automation Firm
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-extrabold text-black dark:text-white leading-tight mb-6">One Stop<br /> IoT <span class="text-primary">Solutions</span></h1>
+                        <p class="text-lg text-light-grey max-w-md mx-auto md:mx-0 mb-8">"Transforming industries with innovative IoT solutions for seamless connectivity and efficiency."</p>
+                        <a class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition-all transform hover:-translate-y-1 cursor-pointer" onclick="navigateTo('contact-view')">
+                            Make An Enquiry
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </a>
+                    </div>
+                    <div class="relative flex justify-center items-center">
+                        <div class="absolute -inset-4 bg-gradient-to-br from-primary/20 via-secondary/20 to-transparent rounded-3.5xl blur-xl"></div>
+                        <img alt="Illustration of a person analyzing data charts with gears in the background" class="relative max-w-full h-auto rounded-2.5xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsOBdLgt8xOr-OakWUxGxmDx36zvlg8vOcCFtttN-exmV0MbdbF81zEnGuPDefLiKx49huLhWkk32oCpCK8sqC1YK3qDtTpAJmTM3Aqt01l5muQcU9WYzd7d4LTU_HUptcB7CqHIHBeohjWPg2ejAViKwFQricipIyH2cILAWEijQEgm1B4VvHLQTU1RyXHprr9Tq3fHANjFozIFjb8LRpo0Xewpwmr4NNkAhu5ksj7lf5INtUTryv-FrvSDuCMbibGiNUJSMX7rb7" />
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <section class="py-16 md:py-24 bg-white dark:bg-black/50" id="about">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="absolute -top-12 -left-12 w-48 h-48 bg-secondary/10 dark:bg-secondary/20 rounded-full blur-3xl z-0"></div>
+                        <div class="absolute -bottom-12 -right-12 w-56 h-56 bg-primary/10 dark:bg-primary/20 rounded-full blur-3xl z-0"></div>
+                        <img alt="A close-up of a complex circuit board with various electronic components" class="rounded-3xl shadow-2xl relative z-10 w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbSdQWA63mqYz0YX8JKFswUoHxcrIuyN7yNWGIigTq1p9CIyV8M1Bo7vlDD1xYP9MpXEtMFDupJtFYViwZQF5L-zePSVpMX2IhQBLO8oC356eNnCv5RjKFTVC5f0CLwpOy6Xg0h5s-aom6MMjmvFqdznTY28VK4Kny-vcQ-JohVRgBmCN5rdC-PLbFoy9J7LeCelehnEKRd0zdRGRg159ZNrjCSXoIm5z3fC8_GMnv-I_QlVXdV35vJbsztk9WtszRuvhG4NuYgJcM" />
+                    </div>
+                    <div>
+                        <span class="inline-block bg-secondary/10 text-secondary font-semibold px-4 py-2 rounded-full mb-4">About Us</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-6">Innovative IoT solutions for businesses.</h2>
+                        <p class="text-light-grey mb-8 leading-relaxed">Pegasus is a leading innovator in IoT solutions, empowering businesses with cutting-edge technology for seamless connectivity and smart automation. With a focus on reliability and efficiency, we deliver tailor-made solutions to meet diverse industry needs.</p>
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 flex-shrink-0 bg-red-100 dark:bg-red-500/20 rounded-xl flex items-center justify-center text-red-500">
+                                    <span class="material-symbols-outlined">dashboard_customize</span>
+                                </div>
+                                <span class="font-medium text-grey dark:text-very-light-grey">Modular Excellence</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 flex-shrink-0 bg-red-100 dark:bg-red-500/20 rounded-xl flex items-center justify-center text-red-500">
+                                    <span class="material-symbols-outlined">insights</span>
+                                </div>
+                                <span class="font-medium text-grey dark:text-very-light-grey">Data-driven Insights</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 flex-shrink-0 bg-red-100 dark:bg-red-500/20 rounded-xl flex items-center justify-center text-red-500">
+                                    <span class="material-symbols-outlined">integration_instructions</span>
+                                </div>
+                                <span class="font-medium text-grey dark:text-very-light-grey">Seamless Integration</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 flex-shrink-0 bg-red-100 dark:bg-red-500/20 rounded-xl flex items-center justify-center text-red-500">
+                                    <span class="material-symbols-outlined">support_agent</span>
+                                </div>
+                                <span class="font-medium text-grey dark:text-very-light-grey">Dedicated Support</span>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 dark:bg-primary/10 border-l-4 border-primary p-6 rounded-r-lg">
+                            <p class="text-grey dark:text-blue-100 italic">"If you think that the internet has changed your life, think again. The IoT is about to change it all over again"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPDATED: Services Section with your 3 Graphics -->
+        <section class="py-16 md:py-24 text-center" id="services">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <span class="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full mb-4">Our Services</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-12">Our Main Focus</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white dark:bg-black/20 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 transition-all hover:shadow-2xl hover:-translate-y-2 group overflow-hidden flex flex-col">
+                        <div class="w-full h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                            <!-- Image 1 -->
+                            <img alt="Dashboard & Webapp Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Gemini_Generated_Image_z31scdz31scdz31s.png" />
+                        </div>
+                        <div class="p-8 text-left flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold mb-3 text-black dark:text-white">Dashboard &amp; Webapp</h3>
+                            <p class="text-light-grey">Specializing in the development of interactive dashboards and web applications, providing tailored solutions for data visualization, user management, and backend integration.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white dark:bg-black/20 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 transition-all hover:shadow-2xl hover:-translate-y-2 group overflow-hidden flex flex-col">
+                        <div class="w-full h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                            <!-- Image 2 -->
+                            <img alt="Embedded Hardware Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Gemini_Generated_Image_iy2bxdiy2bxdiy2b.png" />
+                        </div>
+                        <div class="p-8 text-left flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold mb-3 text-black dark:text-white">Customised Embedded Hardware</h3>
+                            <p class="text-light-grey">Offering custom-designed hardware and firmware solutions for IoT and automation, ensuring optimal performance and seamless integration.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white dark:bg-black/20 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 transition-all hover:shadow-2xl hover:-translate-y-2 group overflow-hidden flex flex-col">
+                        <div class="w-full h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                            <!-- Image 3 -->
+                            <img alt="AI & ML Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Gemini_Generated_Image_9uzzmx9uzzmx9uzz.png" />
+                        </div>
+                        <div class="p-8 text-left flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold mb-3 text-black dark:text-white">AI &amp; ML in Microcontrollers</h3>
+                            <p class="text-light-grey">Implementing AI and ML models on microcontrollers to enable smart decision-making at the edge, for sensor-based analytics and predictive maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPDATED: Partners Section with Myosa and Aikyam Images -->
+        <section class="py-16 md:py-24 text-center bg-white dark:bg-black/50" id="partners">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <span class="inline-block bg-secondary/10 text-secondary font-semibold px-4 py-2 rounded-full mb-4">Collaborator</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-12">Our Partner Brands</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Partner 1: Myosa -->
+                    <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem]" href="https://myosa-sensors.org/" target="_blank">
+                        <div class="flex items-center justify-center h-full transition-transform duration-500 ease-in-out group-hover:scale-0">
+                            <!-- UPDATED: Myosa Image -->
+                            <img alt="MYOSA logo" class="max-h-24 w-auto object-contain" src="myosaa.png" />
+                        </div>
+                        <div class="absolute inset-0 bg-blue-50 dark:bg-primary/10 p-8 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                            <h3 class="text-xl font-bold text-black dark:text-white mb-2">MYOSA</h3>
+                            <p class="text-light-grey text-sm">MYOSA (Make Your Own Sensors Applications) is a plug-and-play, multipurpose, multi-sensor system for learning and developing sensor based applications.</p>
+                        </div>
+                    </a>
+
+                    <!-- Partner 2: Aikyam -->
+                    <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem]" href="https://aikyamhome.in/" target="_blank">
+                        <div class="flex items-center justify-center h-full transition-transform duration-500 ease-in-out group-hover:scale-0">
+                            <!-- UPDATED: Aikyam Image -->
+                            <img alt="Aikyam Automations LLP logo" class="max-h-24 w-auto object-contain" src="aikyam1.png" />
+                        </div>
+                        <div class="absolute inset-0 bg-blue-50 dark:bg-primary/10 p-8 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                            <h3 class="text-xl font-bold text-black dark:text-white mb-2">Aikyam Automations</h3>
+                            <p class="text-light-grey text-sm">Convert your home into a Smart Home with Aikyam Automations. Eliminate switchboards, enjoy seamless automation, effortless control.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 text-center" id="technologies">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <span class="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full mb-4">Technologies</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-12">Tech Solutions We Offer</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tech Items (Unchanged) -->
+                    <div class="bg-white dark:bg-black/20 p-6 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left">
+                        <h3 class="text-lg font-bold mb-4 text-black dark:text-white flex items-center gap-3"><span class="material-symbols-outlined text-primary">wifi</span> Wireless Communication</h3>
+                        <ul class="space-y-2 text-light-grey">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> WiFi</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> GSM (2G/4G/5G)</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> GPS</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> LoRa</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-black/20 p-6 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left">
+                        <h3 class="text-lg font-bold mb-4 text-black dark:text-white flex items-center gap-3"><span class="material-symbols-outlined text-primary">settings_ethernet</span> Wired Communication</h3>
+                        <ul class="space-y-2 text-light-grey">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> Ethernet</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> RS-485</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> modbus</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> canbus</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-black/20 p-6 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left">
+                        <h3 class="text-lg font-bold mb-4 text-black dark:text-white flex items-center gap-3"><span class="material-symbols-outlined text-primary">sensors</span> Sensing &amp; Data</h3>
+                        <ul class="space-y-2 text-light-grey">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> 4-20mA</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> ADC</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> I2C</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> SPI</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-black/20 p-6 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left">
+                        <h3 class="text-lg font-bold mb-4 text-black dark:text-white flex items-center gap-3"><span class="material-symbols-outlined text-primary">memory</span> Computing &amp; Processing</h3>
+                        <ul class="space-y-2 text-light-grey">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> SBC</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> tinyML</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> OpenCV</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-black/20 p-6 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left">
+                        <h3 class="text-lg font-bold mb-4 text-black dark:text-white flex items-center gap-3"><span class="material-symbols-outlined text-primary">cloud</span> IoT &amp; Cloud</h3>
+                        <ul class="space-y-2 text-light-grey">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> MQTT/s</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> AWS IoT</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> HTTP/s</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-black/20 p-6 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left">
+                        <h3 class="text-lg font-bold mb-4 text-black dark:text-white flex items-center gap-3"><span class="material-symbols-outlined text-primary">battery_charging_full</span> Power Management</h3>
+                        <ul class="space-y-2 text-light-grey">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> AC to DC SMPS</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> DC to DC Converter</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> Solar Power</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-black text-very-light-grey" id="contact">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="md:col-span-1">
+                        <a class="flex items-center gap-3 mb-4" href="#" onclick="navigateTo('home-view'); return false;">
+                            <!-- REPLACED: Footer Logo with Pegasus Automation Image -->
+                            <img src="header.png" alt="Pegasus Automation" class="h-16 w-auto object-contain" />
+                        </a>
+                        <p class="text-light-grey mb-6">"Transforming industries with innovative IoT solutions for seamless connectivity and efficiency."</p>
+                    </div>
+                    <div class="md:col-start-2 md:col-span-1">
+                        <h3 class="text-lg font-semibold text-white mb-4">Contact Info</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                                <span>Ahmedabad, Gujarat, India</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">phone</span>
+                                <div>
+                                    <span>+91 7574842044</span><br />
+                                    <span>+91 7096515266</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">email</span>
+                                <div>
+                                    <span>abhi@pegasusautomation.in</span><br />
+                                    <span>prashant@pegasusautomation.in</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:col-start-3">
+                        <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
+                        <ul class="space-y-3 text-light-grey">
+                            <li><a class="hover:text-white transition-colors" href="#" onclick="navigateTo('home-view'); return false;">Home</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#about">About Us</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#services">Service</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#technologies">Technologies</a></li>
+                            <li><a class="hover:text-white transition-colors cursor-pointer" onclick="navigateTo('contact-view')">Contact Us</a></li>
+                            <li><a class="hover:text-white transition-colors cursor-pointer" onclick="navigateTo('join-view')">Join Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-12 border-t border-grey/50 pt-8 text-center text-light-grey text-sm">
+                    <p>© 2025 Pegasus Automation. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ==============================================
+         VIEW 2: CONTACT US PAGE
+         ============================================== -->
+    <div id="contact-view" class="view-section bg-primary font-display min-h-screen">
+        <div class="min-h-screen flex items-center justify-center p-4">
+            <div class="w-full max-w-5xl bg-white dark:bg-card-dark rounded-lg shadow-2xl p-8 md:p-12 mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="flex flex-col justify-center space-y-12">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
+                                <span class="material-icons text-primary" style="font-size: 24px;">location_on</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-light dark:text-very-light-grey">Address</h3>
+                                <p class="text-light-grey dark:text-text-secondary-dark">Ahmedabad, Gujarat</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
+                                <span class="material-icons text-primary" style="font-size: 24px;">call</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-light dark:text-very-light-grey">Phone</h3>
+                                <p class="text-light-grey dark:text-text-secondary-dark">+91 75748 42044</p>
+                                <p class="text-light-grey dark:text-text-secondary-dark">+91 70965 15266</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
+                                <span class="material-icons text-primary" style="font-size: 24px;">email</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-light dark:text-very-light-grey">Email</h3>
+                                <p class="text-light-grey dark:text-text-secondary-dark break-all">abhi@pegasusautomation.in</p>
+                                <p class="text-light-grey dark:text-text-secondary-dark break-all">prashant@pegasusautomation.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:border-l md:border-gray-200 dark:border-gray-600 md:pl-12">
+                        <h2 class="text-3xl font-bold text-primary mb-2">Contact Us</h2>
+                        <p class="text-light-grey dark:text-text-secondary-dark mb-8">
+                            Please fill out the support form below for any inquiries or assistance needed. Our dedicated team is committed to providing timely and personalized support to address your needs effectively. Thank you for reaching out
+                        </p>
+                        <form action="#" class="space-y-5" method="POST">
+                            <div>
+                                <input class="w-full bg-input-bg-light dark:bg-input-bg-dark border-none rounded-md py-3 px-4 text-text-light dark:text-very-light-grey placeholder-text-secondary-light dark:placeholder-text-secondary-dark focus:ring-2 focus:ring-primary" id="full-name" name="full-name" placeholder="Enter your Full Name" type="text" />
+                            </div>
+                            <div>
+                                <input class="w-full bg-input-bg-light dark:bg-input-bg-dark border-none rounded-md py-3 px-4 text-text-light dark:text-very-light-grey placeholder-text-secondary-light dark:placeholder-text-secondary-dark focus:ring-2 focus:ring-primary" id="email" name="email" placeholder="Enter your Email" type="email" />
+                            </div>
+                            <div>
+                                <input class="w-full bg-input-bg-light dark:bg-input-bg-dark border-none rounded-md py-3 px-4 text-text-light dark:text-very-light-grey placeholder-text-secondary-light dark:placeholder-text-secondary-dark focus:ring-2 focus:ring-primary" id="phone-number" name="phone-number" placeholder="Enter your Phone Number" type="tel" />
+                            </div>
+                            <div>
+                                <textarea class="w-full bg-input-bg-light dark:bg-input-bg-dark border-none rounded-md py-3 px-4 text-text-light dark:text-very-light-grey placeholder-text-secondary-light dark:placeholder-text-secondary-dark focus:ring-2 focus:ring-primary" id="message" name="message" placeholder="Enter your message" rows="4"></textarea>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-2">
+                                <button class="bg-primary text-white font-semibold py-2 px-8 rounded-md hover:bg-opacity-90 transition-colors duration-300" type="submit">
+                                    SUBMIT
+                                </button>
+                                <button onclick="navigateTo('home-view')" class="bg-gray-200 dark:bg-gray-500 text-text-light dark:text-white font-semibold py-2 px-8 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300" type="button">
+                                    Back
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================================
+         VIEW 3: JOIN US PAGE
+         ============================================== -->
+    <div id="join-view" class="view-section bg-primary min-h-screen">
+        <div class="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
+            <div class="w-full max-w-6xl mx-auto bg-white dark:bg-background-dark rounded-lg shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                <div class="lg:w-1/3 p-8 sm:p-10 text-center space-y-12">
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-primary text-4xl mb-4">location_on</span>
+                        <h2 class="text-xl font-bold text-text-light dark:text-very-light-grey mb-1">Address</h2>
+                        <p class="text-text-muted-light dark:text-text-muted-dark">Ahmedabad, Gujarat</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-primary text-4xl mb-4">phone</span>
+                        <h2 class="text-xl font-bold text-text-light dark:text-very-light-grey mb-1">Phone</h2>
+                        <p class="text-text-muted-light dark:text-text-muted-dark">+91 75748 42044</p>
+                        <p class="text-text-muted-light dark:text-text-muted-dark">+91 70965 15266</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-primary text-4xl mb-4">email</span>
+                        <h2 class="text-xl font-bold text-text-light dark:text-very-light-grey mb-1">Email</h2>
+                        <p class="text-text-muted-light dark:text-text-muted-dark">abhi@pegasusautomation.in</p>
+                        <p class="text-text-muted-light dark:text-text-muted-dark">prashant@pegasusautomation.in</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex justify-center items-center">
+                    <div class="w-px h-4/5 bg-gray-200 dark:bg-gray-700"></div>
+                </div>
+                <div class="lg:w-2/3 p-8 sm:p-10">
+                    <h1 class="text-3xl font-bold text-primary mb-2">Join Us</h1>
+                    <p class="text-text-muted-light dark:text-text-muted-dark mb-8">
+                        Please fill out the support form below for any inquiries or assistance needed. Our dedicated team is committed to providing timely and personalized support to address your needs effectively. Thank you for reaching out
+                    </p>
+                    <form action="#" class="space-y-6" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" name="full_name" placeholder="Enter your Full Name" type="text" />
+                            <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" name="email" placeholder="Enter your Email" type="email" />
+                            <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" name="phone" placeholder="Enter your Phone" type="tel" />
+                            <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" name="city_country" placeholder="City, Country" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-2" for="career_option">Career Option:</label>
+                            <select class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey" id="career_option" name="career_option">
+                                <option>-- Select an Option --</option>
+                                <option value="firmware_developer">Embedded Firmware Developer</option>
+                                <option value="hardware_developer">Embedded Hardware Developer</option>
+                                <option value="bdm">Business Development Manager</option>
+                                <option value="designer">Graphic Designer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center space-x-4 pt-4">
+                            <button class="px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-colors duration-300" type="submit">
+                                SUBMIT
+                            </button>
+                            <button onclick="navigateTo('home-view')" class="px-8 py-3 bg-gray-200 dark:bg-gray-700 text-text-light dark:text-white font-semibold rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-colors duration-300" type="button">
+                                BACK
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
