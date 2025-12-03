@@ -130,16 +130,17 @@
     </script>
 </head>
 
-<body class="font-display bg-background-light dark:bg-background-dark text-grey dark:text-very-light-grey transition-colors duration-300">
+<!-- FIX: Added overflow-x-hidden to body to prevent horizontal scrolling globally -->
+<body class="font-display bg-background-light dark:bg-background-dark text-grey dark:text-very-light-grey transition-colors duration-300 overflow-x-hidden">
 
     <div id="home-view" class="view-section active">
         
-        <!-- Sticky Header Wrapper -->
-        <div class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
+        <!-- Sticky Header Wrapper -> Changed to Fixed for better mobile stability -->
+        <div class="fixed top-0 left-0 right-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <header class="py-4 flex justify-between items-center relative">
                     <a class="flex items-center gap-3" href="#" onclick="navigateTo('home-view'); return false;">
-                        <img src="Images/Pegasus_Automation.png" alt="Pegasus Automation" class="h-16 w-auto" />
+                        <img src="Images/Pegasus_Automation.png" alt="Pegasus Automation" class="h-16 w-auto" onerror="this.src='https://placehold.co/200x80?text=Pegasus+Automation'"/>
                     </a>
                     
                     <nav class="hidden md:flex items-center space-x-8">
@@ -161,10 +162,11 @@
                     </button>
                 </header>
 
-                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white dark:bg-[#252525] shadow-xl border-b border-gray-100 dark:border-gray-700 z-40 p-6 flex flex-col space-y-4">
+                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white dark:bg-[#252525] shadow-xl border-b border-gray-100 dark:border-gray-700 z-40 p-6 flex flex-col space-y-4 max-h-[85vh] overflow-y-auto">
                     <div class="flex justify-between items-center border-b border-gray-100 dark:border-gray-700 pb-2">
                         <span class="text-light-grey dark:text-very-light-grey font-medium">Theme</span>
-                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                        <!-- FIX: Added toggleMobileMenu() to close the menu when theme is toggled -->
+                        <button onclick="toggleTheme(); toggleMobileMenu()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none">
                             <span class="material-symbols-outlined dark:hidden text-primary">light_mode</span>
                             <span class="material-symbols-outlined hidden dark:block text-primary">dark_mode</span>
                         </button>
@@ -180,8 +182,10 @@
         </div>
 
         <!-- Main Content -->
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <main class="py-16 md:py-24">
+        <!-- Added pt-24 to compensate for fixed header height (approx 96px) -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative pt-24">
+            <!-- FIX: Added overflow-hidden to main to contain the hero image glow effect -->
+            <main class="py-16 md:py-24 overflow-hidden">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="text-center md:text-left">
                         <div class="inline-flex items-center gap-2 bg-blue-100 dark:bg-primary/20 text-primary font-semibold px-4 py-2 rounded-full mb-6">
@@ -203,7 +207,8 @@
             </main>
         </div>
         
-        <section class="py-16 md:py-24 bg-white dark:bg-black/50" id="about">
+        <!-- FIX: Added overflow-hidden to About section to cut off the decorative blur blobs that extend to the right -->
+        <section class="py-16 md:py-24 bg-white dark:bg-black/50 overflow-hidden" id="about">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div class="relative">
@@ -257,7 +262,7 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white dark:bg-black/20 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 transition-all hover:shadow-2xl hover:-translate-y-2 group overflow-hidden flex flex-col">
                         <div class="w-full h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                            <img alt="Dashboard & Webapp Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Images/Dashboard & Webapp.png" />
+                            <img alt="Dashboard & Webapp Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Images/Dashboard & Webapp.png" onerror="this.src='https://placehold.co/600x400?text=Dashboard+Webapp'"/>
                         </div>
                         <div class="p-8 text-left flex-grow flex flex-col">
                             <h3 class="text-xl font-bold mb-3 text-black dark:text-white">Dashboard & Webapp</h3>
@@ -266,7 +271,7 @@
                     </div>
                     <div class="bg-white dark:bg-black/20 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 transition-all hover:shadow-2xl hover:-translate-y-2 group overflow-hidden flex flex-col">
                         <div class="w-full h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                            <img alt="Embedded Hardware Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Images/Customised Embedded Hardware.png" />
+                            <img alt="Embedded Hardware Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Images/Customised Embedded Hardware.png" onerror="this.src='https://placehold.co/600x400?text=Embedded+Hardware'"/>
                         </div>
                         <div class="p-8 text-left flex-grow flex flex-col">
                             <h3 class="text-xl font-bold mb-3 text-black dark:text-white">Customised Embedded Hardware</h3>
@@ -275,7 +280,7 @@
                     </div>
                     <div class="bg-white dark:bg-black/20 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 transition-all hover:shadow-2xl hover:-translate-y-2 group overflow-hidden flex flex-col">
                         <div class="w-full h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                            <img alt="AI & ML Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Images/AI & ML in Microcontrollers.png" />
+                            <img alt="AI & ML Graphic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="Images/AI & ML in Microcontrollers.png" onerror="this.src='https://placehold.co/600x400?text=AI+ML+Microcontrollers'"/>
                         </div>
                         <div class="p-8 text-left flex-grow flex flex-col">
                             <h3 class="text-xl font-bold mb-3 text-black dark:text-white">AI & ML in Microcontrollers</h3>
@@ -293,7 +298,7 @@
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem]" href="https://myosa-sensors.org/" target="_blank">
                         <div class="flex items-center justify-center h-full transition-transform duration-500 ease-in-out group-hover:scale-0">
-                            <img alt="MYOSA logo" class="max-h-24 w-auto object-contain" src="Images/Myosa.png" />
+                            <img alt="MYOSA logo" class="max-h-24 w-auto object-contain" src="Images/Myosa.png" onerror="this.src='https://placehold.co/200x100?text=MYOSA'"/>
                         </div>
                         <div class="absolute inset-0 bg-blue-50 dark:bg-primary/10 p-8 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
                             <h3 class="text-xl font-bold text-black dark:text-white mb-2">MYOSA</h3>
@@ -302,7 +307,7 @@
                     </a>
                     <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem]" href="https://aikyamhome.in/" target="_blank">
                         <div class="flex items-center justify-center h-full transition-transform duration-500 ease-in-out group-hover:scale-0">
-                            <img alt="Aikyam Automations LLP logo" class="max-h-24 w-auto object-contain" src="Images/Aikyam.png" />
+                            <img alt="Aikyam Automations LLP logo" class="max-h-24 w-auto object-contain" src="Images/Aikyam.png" onerror="this.src='https://placehold.co/200x100?text=Aikyam'"/>
                         </div>
                         <div class="absolute inset-0 bg-blue-50 dark:bg-primary/10 p-8 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
                             <h3 class="text-xl font-bold text-black dark:text-white mb-2">Aikyam Automations</h3>
@@ -384,7 +389,7 @@
                 <div class="grid md:grid-cols-3 gap-12">
                     <div class="md:col-span-1">
                         <a class="flex items-center gap-3 mb-4" href="#" onclick="navigateTo('home-view'); return false;">
-                            <img src="Images/Pegasus_Automation.png" alt="Pegasus Automation" class="h-16 w-auto object-contain" />
+                            <img src="Images/Pegasus_Automation.png" alt="Pegasus Automation" class="h-16 w-auto object-contain" onerror="this.src='https://placehold.co/200x80?text=Pegasus+Automation'"/>
                         </a>
                         <p class="text-light-grey mb-6">"Transforming industries with innovative IoT solutions for seamless connectivity and efficiency."</p>
                     </div>
@@ -479,19 +484,19 @@
                             <!-- Full Name -->
                             <div>
                                 <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" 
-                                       id="full-name" name="full-name" placeholder="Enter your Full Name" type="text" />
+                                             id="full-name" name="full-name" placeholder="Enter your Full Name" type="text" />
                             </div>
                             
                             <!-- Email -->
                             <div>
                                 <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" 
-                                       id="email" name="email" placeholder="Enter your Email" type="email" />
+                                             id="email" name="email" placeholder="Enter your Email" type="email" />
                             </div>
                             
                             <!-- Phone -->
                             <div>
                                 <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" 
-                                       id="phone-number" name="phone-number" placeholder="Enter your Phone Number" type="tel" />
+                                             id="phone-number" name="phone-number" placeholder="Enter your Phone Number" type="tel" />
                             </div>
 
                             <!-- Message -->
