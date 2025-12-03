@@ -133,47 +133,54 @@
 <body class="font-display bg-background-light dark:bg-background-dark text-grey dark:text-very-light-grey transition-colors duration-300">
 
     <div id="home-view" class="view-section active">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <header class="py-6 flex justify-between items-center relative z-50">
-                <a class="flex items-center gap-3" href="#" onclick="navigateTo('home-view'); return false;">
-                    <img src="Images/Pegasus_Automation.png" alt="Pegasus Automation" class="h-20 w-56" />
-                </a>
-                
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#" onclick="navigateTo('home-view'); return false;">Home</a>
-                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#about">About Us</a>
-                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#services">Service</a>
-                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#technologies">Technologies</a>
-                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('contact-view')">Contact Us</a>
-                    <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('join-view')">Join Us</a>
+        
+        <!-- Sticky Header Wrapper -->
+        <div class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <header class="py-4 flex justify-between items-center relative">
+                    <a class="flex items-center gap-3" href="#" onclick="navigateTo('home-view'); return false;">
+                        <img src="Images/Pegasus_Automation.png" alt="Pegasus Automation" class="h-16 w-auto" />
+                    </a>
                     
-                    <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none">
-                        <span class="material-symbols-outlined dark:hidden text-primary">light_mode</span>
-                        <span class="material-symbols-outlined hidden dark:block text-primary">dark_mode</span>
-                    </button>
-                </nav>
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#" onclick="navigateTo('home-view'); return false;">Home</a>
+                        <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#about">About Us</a>
+                        <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#services">Service</a>
+                        <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#technologies">Technologies</a>
+                        <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('contact-view')">Contact Us</a>
+                        <a class="font-medium text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('join-view')">Join Us</a>
+                        
+                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                            <span class="material-symbols-outlined dark:hidden text-primary">light_mode</span>
+                            <span class="material-symbols-outlined hidden dark:block text-primary">dark_mode</span>
+                        </button>
+                    </nav>
 
-                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-light-grey focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-black/20 shadow-sm">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-            </header>
-
-            <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-4 right-4 bg-white dark:bg-[#252525] shadow-xl rounded-2xl z-40 p-6 flex flex-col space-y-4 border border-gray-100 dark:border-gray-700">
-                <div class="flex justify-between items-center border-b border-gray-100 dark:border-gray-700 pb-2">
-                    <span class="text-light-grey dark:text-very-light-grey font-medium">Theme</span>
-                    <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none">
-                        <span class="material-symbols-outlined dark:hidden text-primary">light_mode</span>
-                        <span class="material-symbols-outlined hidden dark:block text-primary">dark_mode</span>
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-light-grey focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-black/20 shadow-sm">
+                        <span class="material-symbols-outlined">menu</span>
                     </button>
+                </header>
+
+                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white dark:bg-[#252525] shadow-xl border-b border-gray-100 dark:border-gray-700 z-40 p-6 flex flex-col space-y-4">
+                    <div class="flex justify-between items-center border-b border-gray-100 dark:border-gray-700 pb-2">
+                        <span class="text-light-grey dark:text-very-light-grey font-medium">Theme</span>
+                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                            <span class="material-symbols-outlined dark:hidden text-primary">light_mode</span>
+                            <span class="material-symbols-outlined hidden dark:block text-primary">dark_mode</span>
+                        </button>
+                    </div>
+                    <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#" onclick="navigateTo('home-view'); return false;">Home</a>
+                    <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#about" onclick="toggleMobileMenu()">About Us</a>
+                    <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#services" onclick="toggleMobileMenu()">Service</a>
+                    <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#technologies" onclick="toggleMobileMenu()">Technologies</a>
+                    <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('contact-view')">Contact Us</a>
+                    <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('join-view')">Join Us</a>
                 </div>
-                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#" onclick="navigateTo('home-view'); return false;">Home</a>
-                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#about" onclick="toggleMobileMenu()">About Us</a>
-                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#services" onclick="toggleMobileMenu()">Service</a>
-                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors" href="#technologies" onclick="toggleMobileMenu()">Technologies</a>
-                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('contact-view')">Contact Us</a>
-                <a class="font-medium text-lg text-light-grey hover:text-primary dark:hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('join-view')">Join Us</a>
             </div>
+        </div>
 
+        <!-- Main Content -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
             <main class="py-16 md:py-24">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="text-center md:text-left">
