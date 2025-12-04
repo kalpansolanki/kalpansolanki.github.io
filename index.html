@@ -201,7 +201,12 @@
                     </div>
                     <div class="relative flex justify-center items-center">
                         <div class="absolute -inset-4 bg-gradient-to-br from-primary/20 via-secondary/20 to-transparent rounded-3.5xl blur-xl"></div>
-                        <img alt="Illustration of a person analyzing data charts with gears in the background" class="relative max-w-full h-auto rounded-2.5xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsOBdLgt8xOr-OakWUxGxmDx36zvlg8vOcCFtttN-exmV0MbdbF81zEnGuPDefLiKx49huLhWkk32oCpCK8sqC1YK3qDtTpAJmTM3Aqt01l5muQcU9WYzd7d4LTU_HUptcB7CqHIHBeohjWPg2ejAViKwFQricipIyH2cILAWEijQEgm1B4VvHLQTU1RyXHprr9Tq3fHANjFozIFjb8LRpo0Xewpwmr4NNkAhu5ksj7lf5INtUTryv-FrvSDuCMbibGiNUJSMX7rb7" />
+                        <img 
+                        src="Images/Main.png" 
+                        alt="Illustration of a person analyzing data charts with gears in the background" 
+                        class="relative max-w-full h-45 rounded-2.5xl shadow-2xl object-cover bg-gray-100" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/png?text=Upload+Image+To+See+Here';"
+                    />
                     </div>
                 </div>
             </main>
@@ -296,15 +301,23 @@
                 <span class="inline-block bg-secondary/10 text-secondary font-semibold px-4 py-2 rounded-full mb-4">Collaborator</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-12">Our Partner Brands</h2>
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <!-- MYOSA CARD: Updated with Light/Dark Mode Image Logic -->
                     <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem]" href="https://myosa-sensors.org/" target="_blank">
                         <div class="flex items-center justify-center h-full transition-transform duration-500 ease-in-out group-hover:scale-0">
-                            <img alt="MYOSA logo" class="max-h-24 w-auto object-contain" src="Images/Myosa.png" onerror="this.src='https://placehold.co/200x100?text=MYOSA'"/>
+                            <!-- IMAGE FOR LIGHT THEME (Visible in Light Mode, Hidden in Dark Mode) -->
+                            <img alt="MYOSA logo Light" class="max-h-24 w-auto object-contain block dark:hidden" src="Images/Myosa.png" onerror="this.src='https://placehold.co/200x100?text=MYOSA+Light'"/>
+                            
+                            <!-- IMAGE FOR DARK THEME (Hidden in Light Mode, Visible in Dark Mode) -->
+                            <!-- Note: Please make sure 'Images/Myosa_Dark.png' exists or update the src to your dark mode image file -->
+                            <img alt="MYOSA logo Dark" class="max-h-24 w-auto object-contain hidden dark:block" src="Images/Myosa_Dark.png" onerror="this.src='https://placehold.co/200x100?text=MYOSA+Dark'"/>
                         </div>
                         <div class="absolute inset-0 bg-blue-50 dark:bg-primary/10 p-8 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
                             <h3 class="text-xl font-bold text-black dark:text-white mb-2">MYOSA</h3>
                             <p class="text-light-grey text-sm">MYOSA (Make Your Own Sensors Applications) is a plug-and-play, multipurpose, multi-sensor system for learning and developing sensor based applications.</p>
                         </div>
                     </a>
+
                     <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem]" href="https://aikyamhome.in/" target="_blank">
                         <div class="flex items-center justify-center h-full transition-transform duration-500 ease-in-out group-hover:scale-0">
                             <img alt="Aikyam Automations LLP logo" class="max-h-24 w-auto object-contain" src="Images/Aikyam.png" onerror="this.src='https://placehold.co/200x100?text=Aikyam'"/>
@@ -484,19 +497,19 @@
                             <!-- Full Name -->
                             <div>
                                 <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" 
-                                             id="full-name" name="full-name" placeholder="Enter your Full Name" type="text" />
+                                               id="full-name" name="full-name" placeholder="Enter your Full Name" type="text" />
                             </div>
                             
                             <!-- Email -->
                             <div>
                                 <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" 
-                                             id="email" name="email" placeholder="Enter your Email" type="email" />
+                                               id="email" name="email" placeholder="Enter your Email" type="email" />
                             </div>
                             
                             <!-- Phone -->
                             <div>
                                 <input class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" 
-                                             id="phone-number" name="phone-number" placeholder="Enter your Phone Number" type="tel" />
+                                               id="phone-number" name="phone-number" placeholder="Enter your Phone Number" type="tel" />
                             </div>
 
                             <!-- Message -->
