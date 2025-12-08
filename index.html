@@ -130,12 +130,11 @@
     </script>
 </head>
 
-<!-- FIX: Added overflow-x-hidden to body to prevent horizontal scrolling globally -->
 <body class="font-display bg-background-light dark:bg-background-dark text-grey dark:text-very-light-grey transition-colors duration-300 overflow-x-hidden">
 
     <div id="home-view" class="view-section active">
         
-        <!-- Sticky Header Wrapper -> Changed to Fixed for better mobile stability -->
+        <!-- Sticky Header Wrapper -->
         <div class="fixed top-0 left-0 right-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <header class="py-4 flex justify-between items-center relative">
@@ -165,7 +164,6 @@
                 <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white dark:bg-[#252525] shadow-xl border-b border-gray-100 dark:border-gray-700 z-40 p-6 flex flex-col space-y-4 max-h-[85vh] overflow-y-auto">
                     <div class="flex justify-between items-center border-b border-gray-100 dark:border-gray-700 pb-2">
                         <span class="text-light-grey dark:text-very-light-grey font-medium">Theme</span>
-                        <!-- FIX: Added toggleMobileMenu() to close the menu when theme is toggled -->
                         <button onclick="toggleTheme(); toggleMobileMenu()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none">
                             <span class="material-symbols-outlined dark:hidden text-primary">light_mode</span>
                             <span class="material-symbols-outlined hidden dark:block text-primary">dark_mode</span>
@@ -182,9 +180,7 @@
         </div>
 
         <!-- Main Content -->
-        <!-- Added pt-24 to compensate for fixed header height (approx 96px) -->
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative pt-24">
-            <!-- FIX: Added overflow-hidden to main to contain the hero image glow effect -->
             <main class="py-16 md:py-24 overflow-hidden">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="text-center md:text-left">
@@ -212,7 +208,6 @@
             </main>
         </div>
         
-        <!-- FIX: Added overflow-hidden to About section to cut off the decorative blur blobs that extend to the right -->
         <section class="py-16 md:py-24 bg-white dark:bg-black/50 overflow-hidden" id="about">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -222,7 +217,8 @@
                         <img alt="A close-up of a complex circuit board with various electronic components" class="rounded-3xl shadow-2xl relative z-10 w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbSdQWA63mqYz0YX8JKFswUoHxcrIuyN7yNWGIigTq1p9CIyV8M1Bo7vlDD1xYP9MpXEtMFDupJtFYViwZQF5L-zePSVpMX2IhQBLO8oC356eNnCv5RjKFTVC5f0CLwpOy6Xg0h5s-aom6MMjmvFqdznTY28VK4Kny-vcQ-JohVRgBmCN5rdC-PLbFoy9J7LeCelehnEKRd0zdRGRg159ZNrjCSXoIm5z3fC8_GMnv-I_QlVXdV35vJbsztk9WtszRuvhG4NuYgJcM" />
                     </div>
                     <div>
-                        <span class="inline-block bg-secondary/10 text-secondary font-semibold px-4 py-2 rounded-full mb-4">About Us</span>
+                        <!-- Updated: Changed to Primary Color -->
+                        <span class="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full mb-4">About Us</span>
                         <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-6">Innovative IoT solutions for businesses.</h2>
                         <p class="text-light-grey mb-8 leading-relaxed">Pegasus is a leading innovator in IoT solutions, empowering businesses with cutting-edge technology for seamless connectivity and smart automation. With a focus on reliability and efficiency, we deliver tailor-made solutions to meet diverse industry needs.</p>
                         <div class="grid grid-cols-2 gap-6 mb-8">
@@ -298,18 +294,20 @@
 
         <section class="py-16 md:py-24 text-center bg-white dark:bg-black/50" id="partners">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <span class="inline-block bg-secondary/10 text-secondary font-semibold px-4 py-2 rounded-full mb-4">Collaborator</span>
+                <!-- Updated: Changed to Primary Color -->
+                <span class="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full mb-4">Collaborator</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-12">Our Partner Brands</h2>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Updated: Removed Grid, Used Flex to Center Single Item -->
+                <div class="flex justify-center max-w-4xl mx-auto">
                     
-                    <!-- MYOSA CARD: Updated with Light/Dark Mode Image Logic -->
-                    <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem]" href="https://myosa-sensors.org/" target="_blank">
+                    <!-- MYOSA CARD: Added w-full max-w-lg to center nicely -->
+                    <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem] w-full max-w-lg" href="https://myosa-sensors.org/" target="_blank">
                         <div class="flex items-center justify-center h-full transition-transform duration-500 ease-in-out group-hover:scale-0">
-                            <!-- IMAGE FOR LIGHT THEME (Visible in Light Mode, Hidden in Dark Mode) -->
+                            <!-- IMAGE FOR LIGHT THEME -->
                             <img alt="MYOSA logo Light" class="max-h-24 w-auto object-contain block dark:hidden" src="Images/Myosa.png" onerror="this.src='https://placehold.co/200x100?text=MYOSA+Light'"/>
                             
-                            <!-- IMAGE FOR DARK THEME (Hidden in Light Mode, Visible in Dark Mode) -->
-                            <!-- Note: Please make sure 'Images/Myosa_Dark.png' exists or update the src to your dark mode image file -->
+                            <!-- IMAGE FOR DARK THEME -->
                             <img alt="MYOSA logo Dark" class="max-h-24 w-auto object-contain hidden dark:block" src="Images/Myosa_Dark.png" onerror="this.src='https://placehold.co/200x100?text=MYOSA+Dark'"/>
                         </div>
                         <div class="absolute inset-0 bg-blue-50 dark:bg-primary/10 p-8 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
@@ -318,15 +316,7 @@
                         </div>
                     </a>
 
-                    <a class="relative group block bg-white dark:bg-black/20 p-8 rounded-2.5xl shadow-lg border border-very-light-grey/20 dark:border-grey/20 text-left overflow-hidden ring-2 ring-primary min-h-[16rem]" href="https://aikyamhome.in/" target="_blank">
-                        <div class="flex items-center justify-center h-full transition-transform duration-500 ease-in-out group-hover:scale-0">
-                            <img alt="Aikyam Automations LLP logo" class="max-h-24 w-auto object-contain" src="Images/Aikyam.png" onerror="this.src='https://placehold.co/200x100?text=Aikyam'"/>
-                        </div>
-                        <div class="absolute inset-0 bg-blue-50 dark:bg-primary/10 p-8 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                            <h3 class="text-xl font-bold text-black dark:text-white mb-2">Aikyam Automations</h3>
-                            <p class="text-light-grey text-sm">Convert your home into a Smart Home with Aikyam Automations. Eliminate switchboards, enjoy seamless automation, effortless control.</p>
-                        </div>
-                    </a>
+                    <!-- REMOVED AIKYAM CARD -->
                 </div>
             </div>
         </section>
@@ -515,7 +505,7 @@
                             <!-- Message -->
                             <div>
                                 <textarea class="w-full px-4 py-3 bg-input-bg-light dark:bg-input-bg-dark border border-transparent focus:ring-2 focus:ring-primary focus:border-primary rounded text-text-light dark:text-very-light-grey placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark" 
-                                          id="message" name="message" placeholder="Enter your message" rows="4"></textarea>
+                                      id="message" name="message" placeholder="Enter your message" rows="4"></textarea>
                             </div>
                         </div>
 
