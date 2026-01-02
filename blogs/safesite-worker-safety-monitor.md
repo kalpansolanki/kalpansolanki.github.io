@@ -91,7 +91,7 @@ In busy factory settings, workers operate heavy machinery, work near hazardous e
 ### **Videos**
 
 <div class="youtube-embed">
-  <iframe src="https://www.youtube.com/embed/VFZv7Pr-MHI"></iframe>
+  <iframe src="https://www.youtube.com/embed/akU6x-1xbDo"></iframe>
 </div>
 
 ---
