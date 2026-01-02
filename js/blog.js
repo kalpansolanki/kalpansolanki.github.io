@@ -18,14 +18,14 @@ const blogs = [
   "blogs/smart-lumbar-trainer.md",
   "blogs/myosa-interactive-learning-robot-myopet.md",
   "blogs/myosa-pothole-detection.md",
-  "blogs/myosa-gesture-control-system.md",  
-  "blogs/myosa-baby-monitormd",
+  "blogs/myosa-gesture-control-system-main.md", // Updated name
+  "blogs/myosa-baby-monitor.md",              // Fixed missing dot
   "blogs/myosa-drowsiness.md",
   "blogs/smartpass-crowd-safety.md",
   "blogs/myosa-ppt-controller.md",
   "blogs/myosa-smart-helmet.md",
   "blogs/project-drishti.md",
-  "blogs/kairos.md",
+  "blogs/kairos(13th).md",                   // Updated name
   "blogs/myotrack.md",
   "blogs/myosa_revive.md",
   "blogs/myosa-warehouse.md",
@@ -34,13 +34,13 @@ const blogs = [
   "blogs/smart-butterfly.md",
   "blogs/TejasARK.md",
   "blogs/myosa-secure-ride-system.md",
-  "blogs/sherpa-main.md",
+  "blogs/sherpa.md",                         // Updated name
   "blogs/smart-vest-myosa.md",
   "blogs/lumina.md",
   "blogs/sitx.md",
-  "blogs/safesite-worker-safety-monitor.md"
+  "blogs/safesite-worker-safety-monitor.md",
+  "blogs/fault-detection(18th).md"           // Added missing file
 ];
-
 
 // ==============================
 // PAGINATION CONFIG - 6 PER PAGE
@@ -297,4 +297,5 @@ if (content) {
         console.error("Blog loading error:", err);
       });
   }
+
 }
