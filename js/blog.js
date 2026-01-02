@@ -38,7 +38,6 @@ const blogs = [
   "blogs/sherpa.md",
   "blogs/smart-vest-myosa.md",
   "blogs/lumina.md",
-  "blogs/sitx.md",
   "blogs/safesite-worker-safety-monitor.md",
   "blogs/fault-detection(18th).md"
 ];
@@ -260,3 +259,4 @@ if (content) {
       });
   }
 }
+
