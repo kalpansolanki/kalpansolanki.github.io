@@ -65,9 +65,10 @@ This architecture ensures uninterrupted and safe operation during network outage
 
 ### **Videos**
 
-<p align="center">
-  <img src="/assets/videos/17th-submission/Demo2.gif" width="100%">
-</p>
+<div class="youtube-embed">
+  <iframe src="https://www.youtube.com/embed/at69UOrW2GA"></iframe>
+</div>
+
 
 
 <div class="youtube-embed">
