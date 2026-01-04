@@ -56,13 +56,10 @@ to ensure safety and automation in warehouse environments.
 
 
 ### **Videos**
-<video controls width="100%">
-  <source src="/assets/videos/16th-submission/gas-ventilation.mp4" type="video/mp4">
-</video>
 
-<video controls width="100%">
-  <source src="/assets/videos/16th-submission/fire-extinguisher.mp4" type="video/mp4">
-</video>
+<div class="youtube-embed">
+  <iframe src="https://www.youtube.com/embed/JlnBXH-umMU"></iframe>
+</div>
 
 
 
@@ -144,6 +141,7 @@ This multi-sensor, decision-based control flow enhances system reliability by av
 * iot2.jpeg
 * fire-extinguisher.mp4
 * gas-ventilation.mp4
+
 
 
 
