@@ -27,13 +27,13 @@ MyoTrack addresses this limitation by using wearable inertial sensors to capture
 
 ### Videos
 Presentation video
-<video controls width="100%">
-  <source src="/assets/videos/14th-submission/myotrack-project-presentation.mp4" type="video/mp4">
-</video>
+<div class="youtube-embed">
+  <iframe src="https://www.youtube.com/embed/vK-8Y8fejS0"></iframe>
+</div>
 Demo video
-<video controls width="100%">
-  <source src="/assets/videos/14th-submission/myotrack-project-demo.mp4" type="video/mp4">
-</video>
+<div class="youtube-embed">
+  <iframe src="https://www.youtube.com/embed/mKWl_AuiSpU"></iframe>
+</div>
 
 ## Features (Detailed)
 
