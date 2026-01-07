@@ -40,6 +40,7 @@ const blogs = [
   "blogs/lumina.md",
   "blogs/safesite-worker-safety-monitor.md",
   "blogs/fault-detection(18th).md"
+   "blogs/resqpulse.md"
 ];
 
 // ==============================
@@ -259,6 +260,7 @@ if (content) {
       });
   }
 }
+
 
 
 
