@@ -2,7 +2,7 @@
 publishDate: 2026-01-05
 title: MyOSA LifeSaver – IoT-Based CPR Assistance Prototype
 excerpt: A modular embedded systems prototype exploring sensing, motion control, and real-time feedback for CPR assistance system engineering.
-image: 27th-submission/myosa_cover_image.jpg
+image: 27th-submission/myosa_cover_image.jpeg
 tags:
 - iot
 - embedded-systems
@@ -32,7 +32,7 @@ This project is strictly intended for educational, experimental, and demonstrati
 
 ### Images
 <p align="center">
-<img src="/assets/images/27th-submission/myosa_cover_image.jpg" width="600"><br/>
+<img src="/assets/images/27th-submission/myosa_cover_image.jpeg" width="600"><br/>
 <i>Project cover image</i>
 </p>
 
@@ -42,12 +42,12 @@ This project is strictly intended for educational, experimental, and demonstrati
 </p>
 
 <p align="center">
-<img src="/assets/images/27th-submission/myosa-design_1.jpg" width="800"><br/>
+<img src="/assets/images/27th-submission/myosa-design1.jpeg" width="800"><br/>
 <i>Mechanical enclosure and compression mechanism</i>
 </p>
 
 <p align="center">
-<img src="/assets/images/27th-submission/myosa-design_2.jpg" width="600"><br/>
+<img src="/assets/images/27th-submission/myosa-design2.jpeg" width="600"><br/>
 <i>Alternative mechanical design view</i>
 </p>
 
