@@ -47,7 +47,7 @@ This project is strictly intended for educational, experimental, and demonstrati
 </p>
 
 <p align="center">
-<img src="/assets/images/27th-submission/myosa-design2.jpeg" width="600"><br/>
+<img src="assets/images/27th-submission/myosa-design2.jpeg" width="600"><br/>
 <i>Alternative mechanical design view</i>
 </p>
 
