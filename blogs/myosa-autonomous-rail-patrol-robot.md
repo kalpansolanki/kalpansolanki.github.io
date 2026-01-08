@@ -11,12 +11,6 @@ tags:
 tagline: "Sensorially guarding every inch of the track."
 ---
 
-## Image
-
-<p align="center">
-  <img src="/assets/images/28th-submission/myosa-cover-image.jpeg" width="800" />
-</p>
-
 # Acknowledgements
   We express our sincere gratitude to our Faculty Mentor, Dr. Raman Kumar sir, for his guidance and
   technical support throughout the project. We thank the Department of Electronics and
@@ -392,6 +386,7 @@ Once all components are tested and working correctly, the robot is ready for:
 - Laptop or PC – To run the dashboard and Python scripts for data processing.  
 
 - Stable Wi-Fi Connection – For wireless data transmission between ESP32 and dashboard.
+
 
 
 
