@@ -2,7 +2,7 @@
 publishDate: 2026-01-07T00:00:00Z
 title: Autonomous Rail Patrol Robot for Track Health Analysis and Targeted Maintenance
 excerpt: A compact self-driving robot that patrols railway tracks, detects flaws instantly, and repairs them before they turn into disasters.
-image: 28th-submission/myosa-cover-image.jpg
+image: 28th-submission/myosa-cover-image.jpeg
 tags:
   - TrackBot
   - SmartRailwayAutomation
@@ -14,10 +14,10 @@ tagline: "Sensorially guarding every inch of the track."
 ## Image
 
 <p align="center">
-  <img src="/assets/images/28th-submission/myosa-cover-image.jpg" width="800" />
+  <img src="/assets/images/28th-submission/myosa-cover-image.jpeg" width="800" />
 </p>
 
-#Acknowledgements: 
+# Acknowledgements
   We express our sincere gratitude to our Faculty Mentor, Dr. Raman Kumar sir, for his guidance and
   technical support throughout the project. We thank the Department of Electronics and
   Communication Engineering and the management of NMREC for providing essential resources and a
@@ -392,6 +392,7 @@ Once all components are tested and working correctly, the robot is ready for:
 - Laptop or PC – To run the dashboard and Python scripts for data processing.  
 
 - Stable Wi-Fi Connection – For wireless data transmission between ESP32 and dashboard.
+
 
 
 
