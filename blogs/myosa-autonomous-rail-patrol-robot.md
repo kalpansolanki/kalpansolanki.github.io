@@ -1,30 +1,30 @@
 ---
-PublishDate: 2026-01-07
-Title: Autonomous Rail Patrol Robot for Track Health Analysis and Targeted Maintenance
-Excerpt: A compact self-driving robot that patrols railway tracks, detects flaws instantly, and repairs them before they turn into disasters.
+publishDate: 2026-01-07T00:00:00Z
+title: Autonomous Rail Patrol Robot for Track Health Analysis and Targeted Maintenance
+excerpt: A compact self-driving robot that patrols railway tracks, detects flaws instantly, and repairs them before they turn into disasters.
 image: 28th-submission/myosa-cover-image.jpg
-Tags: 
-  - #TrackBot
-  - #SmartRailwayAutomation
-  - #SafeRails 
-  - #MYOSA4_0
-Tagline: "Sensorially guarding every inch of the track."
-Acknowledgements: 
-  We express our sincere gratitude to our Faculty Mentor, Dr. Raman Kumar sir, for his guidance and
-  technical support throughout the project. We thank the Department of Electronics and
-  Communication Engineering and the management of NMREC for providing essential resources and a
-  supportive environment.
-  "->We also appreciate the IEEE MYOSA Event 4.0 organizers for promoting innovation and practical
-  learning. Finally, we thank our team members for their dedication and teamwork, and we are
-  motivated to further improve our project after being selected for the first round of the finals..
+tags:
+  - TrackBot
+  - SmartRailwayAutomation
+  - SafeRails
+  - MYOSA4_0
+tagline: "Sensorially guarding every inch of the track."
 ---
+
 ## Image
 
 <p align="center">
   <img src="/assets/images/28th-submission/myosa-cover-image.jpg" width="800" />
 </p>
 
-
+#Acknowledgements: 
+  We express our sincere gratitude to our Faculty Mentor, Dr. Raman Kumar sir, for his guidance and
+  technical support throughout the project. We thank the Department of Electronics and
+  Communication Engineering and the management of NMREC for providing essential resources and a
+  supportive environment.
+  "->We also appreciate the IEEE MYOSA Event 4.0 organizers for promoting innovation and practical
+  learning. Finally, we thank our team members for their dedication and teamwork, and we are
+  motivated to further improve our project after being selected for the first round of the finals.
 
 # Overview
 The Autonomous Rail Patrol Robot for Track Health Analysis and Targeted Maintenance is developed
@@ -392,6 +392,7 @@ Once all components are tested and working correctly, the robot is ready for:
 - Laptop or PC – To run the dashboard and Python scripts for data processing.  
 
 - Stable Wi-Fi Connection – For wireless data transmission between ESP32 and dashboard.
+
 
 
 
