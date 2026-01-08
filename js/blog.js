@@ -40,8 +40,8 @@ const blogs = [
   "blogs/lumina.md",
   "blogs/safesite-worker-safety-monitor.md",
   "blogs/fault-detection(18th).md",
-   "blogs/myosa-autonomous-rail-patrol-robot.md",
-   "blogs/resqpulse.md"
+   "blogs/resqpulse.md",
+   "blogs/myosa-autonomous-rail-patrol-robot.md"
 ];
 
 // ==============================
@@ -261,6 +261,7 @@ if (content) {
       });
   }
 }
+
 
 
 
