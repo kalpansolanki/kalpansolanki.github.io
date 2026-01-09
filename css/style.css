@@ -712,4 +712,56 @@ body {
 .blog-card:not(:last-child) {
   border-bottom: none;
 }
+/* =========================
+   REFINED SEARCH
+   ========================= */
+.search-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px 10px; /* Reduced vertical space */
+}
+
+.search-glass-container {
+  position: relative;
+  width: 100%;
+  max-width: 450px; /* Smaller, more centered width */
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; /* Slightly more modern than pill-shape */
+  padding: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.search-glass-container:hover {
+  background: rgba(4, 11, 42, 0.9); /* Darker, matching site-header */
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.search-icon-svg {
+  color: var(--text-muted);
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.search-glass-input {
+  width: 100%;
+  height: 44px; /* More compact height */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 0.95rem; /* Standard readable size */
+  font-family: var(--font-main);
+}
+
+.search-glass-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
 
