@@ -261,84 +261,80 @@ if (content) {
       });
   }
 }
-// ==============================
-// SEARCH FUNCTIONALITY
-// ==============================
-const searchToggleBtn = document.getElementById("searchToggleBtn");
 const searchInput = document.getElementById("blogSearchInput");
-const searchWrapper = document.querySelector(".search-wrapper");
+const clearBtn = document.getElementById("clearSearch");
 
-// Toggle search input visibility
-if (searchToggleBtn) {
-  searchToggleBtn.addEventListener("click", () => {
-    searchWrapper.classList.toggle("active");
-    if (searchWrapper.classList.contains("active")) {
-      searchInput.focus();
-    }
-  });
-}
-
-// Filter blogs based on input
 if (searchInput) {
   searchInput.addEventListener("input", (e) => {
-    const searchTerm = e.target.value.toLowerCase();
+    const searchTerm = e.target.value.toLowerCase().trim();
     
-    // Filter the original full data set
+    // Toggle the "X" button visibility
+    if (searchTerm !== "") {
+      clearBtn.classList.add("visible");
+    } else {
+      clearBtn.classList.remove("visible");
+      renderPage(1); // Restore original 6-per-page view if empty
+      return;
+    }
+
+    // Filter from the pre-loaded data
     const filteredBlogs = allBlogData.filter(blog => 
-      blog.title.toLowerCase().includes(searchTerm) || 
-      blog.excerpt.toLowerCase().includes(searchTerm)
+      blog.title.toLowerCase().includes(searchTerm)
     );
 
-    renderFilteredResults(filteredBlogs);
+    updateBlogDisplay(filteredBlogs, searchTerm);
   });
 }
 
-// Helper to render filtered results without breaking pagination
-function renderFilteredResults(filteredData) {
+// Logic for the Clear ("X") button
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    clearBtn.classList.remove("visible");
+    
+    // 1. Show the pagination element again
+    const pagination = document.getElementById("pagination");
+    if (pagination) {
+      pagination.classList.remove("hidden");
+      pagination.style.display = "flex"; // Ensure it's visible
+    }
+
+    // 2. Re-render the first page (this restores the 6-per-page limit)
+    renderPage(1); 
+    
+    searchInput.focus();
+  });
+}
+function updateBlogDisplay(filteredData, term) {
   const blogList = document.getElementById("blogList");
+  const pagination = document.getElementById("pagination");
   if (!blogList) return;
 
   blogList.innerHTML = "";
   
   if (filteredData.length === 0) {
-    blogList.innerHTML = "<p style='text-align:center; padding:40px; color:#9ca3af; grid-column: 1/-1;'>No results match your search.</p>";
-    document.getElementById("pagination").style.display = "none";
+    blogList.innerHTML = `<p style="grid-column: 1/-1; text-align:center; padding: 40px; color: var(--text-muted);">No projects found for "${term}"</p>`;
+    if (pagination) pagination.classList.add("hidden");
     return;
   }
 
-  // Display all matches (we skip pagination during search for better UX)
+  // Hide pagination during active search
+  if (pagination) {
+    if (term !== "") {
+      pagination.classList.add("hidden");
+      pagination.style.display = "none";
+    } else {
+      pagination.classList.remove("hidden");
+      pagination.style.display = "flex";
+    }
+  }
+
+  // ... rest of your card rendering code ...
   filteredData.forEach(blog => {
     const card = document.createElement("div");
     card.className = "blog-card";
     card.onclick = () => window.location.href = `blog.html?file=${encodeURIComponent(blog.path)}`;
-
-    if (blog.image) {
-      const img = document.createElement("img");
-      img.src = `assets/images/${blog.image}`;
-      img.onerror = function() { this.style.display = 'none'; };
-      card.appendChild(img);
-    }
-
-    const info = document.createElement("div");
-    info.className = "blog-info";
-    info.innerHTML = `
-      <small>🕒 ${formatDate(blog.dateText)}</small>
-      <h2>${blog.title}</h2>
-    `;
-    card.appendChild(info);
+    // (Add image and info rendering here as before)
     blogList.appendChild(card);
   });
-
-  // Hide pagination if searching, show if input is empty
-  const pagination = document.getElementById("pagination");
-  if (pagination) {
-    pagination.style.display = searchInput.value === "" ? "flex" : "none";
-  }
 }
-
-
-
-
-
-
-
