@@ -261,6 +261,80 @@ if (content) {
       });
   }
 }
+// ==============================
+// SEARCH FUNCTIONALITY
+// ==============================
+const searchToggleBtn = document.getElementById("searchToggleBtn");
+const searchInput = document.getElementById("blogSearchInput");
+const searchWrapper = document.querySelector(".search-wrapper");
+
+// Toggle search input visibility
+if (searchToggleBtn) {
+  searchToggleBtn.addEventListener("click", () => {
+    searchWrapper.classList.toggle("active");
+    if (searchWrapper.classList.contains("active")) {
+      searchInput.focus();
+    }
+  });
+}
+
+// Filter blogs based on input
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    
+    // Filter the original full data set
+    const filteredBlogs = allBlogData.filter(blog => 
+      blog.title.toLowerCase().includes(searchTerm) || 
+      blog.excerpt.toLowerCase().includes(searchTerm)
+    );
+
+    renderFilteredResults(filteredBlogs);
+  });
+}
+
+// Helper to render filtered results without breaking pagination
+function renderFilteredResults(filteredData) {
+  const blogList = document.getElementById("blogList");
+  if (!blogList) return;
+
+  blogList.innerHTML = "";
+  
+  if (filteredData.length === 0) {
+    blogList.innerHTML = "<p style='text-align:center; padding:40px; color:#9ca3af; grid-column: 1/-1;'>No results match your search.</p>";
+    document.getElementById("pagination").style.display = "none";
+    return;
+  }
+
+  // Display all matches (we skip pagination during search for better UX)
+  filteredData.forEach(blog => {
+    const card = document.createElement("div");
+    card.className = "blog-card";
+    card.onclick = () => window.location.href = `blog.html?file=${encodeURIComponent(blog.path)}`;
+
+    if (blog.image) {
+      const img = document.createElement("img");
+      img.src = `assets/images/${blog.image}`;
+      img.onerror = function() { this.style.display = 'none'; };
+      card.appendChild(img);
+    }
+
+    const info = document.createElement("div");
+    info.className = "blog-info";
+    info.innerHTML = `
+      <small>🕒 ${formatDate(blog.dateText)}</small>
+      <h2>${blog.title}</h2>
+    `;
+    card.appendChild(info);
+    blogList.appendChild(card);
+  });
+
+  // Hide pagination if searching, show if input is empty
+  const pagination = document.getElementById("pagination");
+  if (pagination) {
+    pagination.style.display = searchInput.value === "" ? "flex" : "none";
+  }
+}
 
 
 
