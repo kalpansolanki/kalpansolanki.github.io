@@ -514,7 +514,7 @@ body {
    PAGINATION
    ========================= */
 .pagination {
-  display: flex;
+display: flex !important; /* Force display when not searching */
   align-items: center;
   justify-content: center;
   gap: 12px;
@@ -551,7 +551,9 @@ body {
   padding: 0 6px;
   font-size: 0.95rem;
 }
-
+.pagination.hidden {
+  display: none !important;
+}
 
 /* =========================
    YOUTUBE EMBED
@@ -713,7 +715,7 @@ body {
   border-bottom: none;
 }
 /* =========================
-   REFINED SEARCH
+   REFINED AESTHETIC SEARCH
    ========================= */
 .search-hero {
   display: flex;
@@ -764,4 +766,19 @@ body {
   color: var(--text-muted);
   font-weight: 400;
 }
+.clear-btn {
+  color: var(--text-muted);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 5px;
+  display: none; 
+  line-height: 1;
+}
 
+.clear-btn.visible {
+  display: block;
+}
+
+.clear-btn:hover {
+  color: #ffffff;
+}
