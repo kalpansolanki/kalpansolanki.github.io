@@ -782,3 +782,7 @@ display: flex !important; /* Force display when not searching */
 .clear-btn:hover {
   color: #ffffff;
 }
+.blog-list {
+  display: grid; /* Keep the grid active even during search */
+  min-height: 200px; /* Prevents the footer from jumping up too high */
+}
