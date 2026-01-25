@@ -42,6 +42,7 @@ const blogs = [
   "blogs/fault-detection(18th).md",
    "blogs/resqpulse.md",
    "blogs/myosa-autonomous-rail-patrol-robot.md"
+   "blogs/sitx.md"
 ];
 
 // ==============================
@@ -268,24 +269,25 @@ if (searchInput) {
   searchInput.addEventListener("input", (e) => {
     const searchTerm = e.target.value.toLowerCase().trim();
     
-    // Toggle the "X" button visibility
     if (searchTerm !== "") {
       clearBtn.classList.add("visible");
+      // Filter from the pre-loaded data
+      const filteredBlogs = allBlogData.filter(blog => 
+        blog.title.toLowerCase().includes(searchTerm)
+      );
+      updateBlogDisplay(filteredBlogs, searchTerm);
     } else {
+      // RESTORE ORIGINAL STATE
       clearBtn.classList.remove("visible");
-      renderPage(1); // Restore original 6-per-page view if empty
-      return;
+      const pagination = document.getElementById("pagination");
+      if (pagination) {
+        pagination.classList.remove("hidden");
+        pagination.style.display = "flex";
+      }
+      renderPage(1); // Goes back to the original 6-per-page view
     }
-
-    // Filter from the pre-loaded data
-    const filteredBlogs = allBlogData.filter(blog => 
-      blog.title.toLowerCase().includes(searchTerm)
-    );
-
-    updateBlogDisplay(filteredBlogs, searchTerm);
   });
 }
-
 // Logic for the Clear ("X") button
 if (clearBtn) {
   clearBtn.addEventListener("click", () => {
@@ -318,23 +320,33 @@ function updateBlogDisplay(filteredData, term) {
     return;
   }
 
-  // Hide pagination during active search
+  // Hide pagination only during active search
   if (pagination) {
-    if (term !== "") {
-      pagination.classList.add("hidden");
-      pagination.style.display = "none";
-    } else {
-      pagination.classList.remove("hidden");
-      pagination.style.display = "flex";
-    }
+    pagination.classList.add("hidden");
+    pagination.style.display = "none";
   }
 
-  // ... rest of your card rendering code ...
+  // Re-render the cards for the search results
   filteredData.forEach(blog => {
     const card = document.createElement("div");
     card.className = "blog-card";
     card.onclick = () => window.location.href = `blog.html?file=${encodeURIComponent(blog.path)}`;
-    // (Add image and info rendering here as before)
+
+    if (blog.image) {
+      const img = document.createElement("img");
+      img.src = `assets/images/${blog.image}`;
+      img.alt = blog.title;
+      card.appendChild(img);
+    }
+
+    const info = document.createElement("div");
+    info.className = "blog-info";
+    info.innerHTML = `
+      <small>🕒 ${formatDate(blog.dateText)}</small>
+      <h2>${blog.title}</h2>
+    `;
+    
+    card.appendChild(info);
     blogList.appendChild(card);
   });
 }
