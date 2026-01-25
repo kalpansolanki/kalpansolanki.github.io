@@ -41,7 +41,7 @@ const blogs = [
   "blogs/safesite-worker-safety-monitor.md",
   "blogs/fault-detection(18th).md",
    "blogs/resqpulse.md",
-   "blogs/myosa-autonomous-rail-patrol-robot.md"
+   "blogs/myosa-autonomous-rail-patrol-robot.md",
    "blogs/sitx.md"
 ];
 
@@ -350,3 +350,4 @@ function updateBlogDisplay(filteredData, term) {
     blogList.appendChild(card);
   });
 }
+
