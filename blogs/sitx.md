@@ -1,5 +1,3 @@
-# SitX – Smart Posture Correction Jacket
-
 ---
 publishDate: 2026-01-01
 title: SitX – Smart Posture Correction Jacket
@@ -15,6 +13,7 @@ tags:
   - Smart-Posture
 ---
 
+# SitX – Smart Posture Correction Jacket
 ## 👥 Contributors
 
 We would like to acknowledge the SitX team for their multidisciplinary contribution:
