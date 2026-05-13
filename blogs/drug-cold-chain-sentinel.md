@@ -2,7 +2,7 @@
 publishDate: 2026-05-09T00:00:00Z
 title: Drug Cold-Chain Sentinel — A Multi-Sensor IoT Platform for Real-Time Vaccine & Medicine Integrity Monitoring
 excerpt: A compact, self-contained IoT device that monitors vaccine shipments across 6 parameters simultaneously — temperature, humidity, shock, tamper, pressure, and altitude — with a self-hosted Wi-Fi dashboard accessible via QR code, zero internet required, and a permanent tamper-evident digital chain-of-custody log.
-image: drug_cold_chaincover.jpg
+image: drug_cold_chain/drug_cold_chaincover.jpg
 tags:
   - cold-chain
   - vaccine-monitoring
