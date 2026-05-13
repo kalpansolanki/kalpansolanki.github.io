@@ -42,6 +42,7 @@ const blogs = [
   "blogs/fault-detection(18th).md",
    "blogs/resqpulse.md",
    "blogs/myosa-autonomous-rail-patrol-robot.md",
+   "blogs/drug-cold-chain-sentinel.md",
    "blogs/sitx.md"
 ];
 
